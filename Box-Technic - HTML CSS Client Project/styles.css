@@ -1,0 +1,779 @@
+
+/* general styles ---*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.yellow-highlight {
+  color: #dfc522;
+}
+
+.bottom-border-yellow {
+  border-bottom: 2px solid #dfc522;
+}
+
+.bottom-border-black {
+  border-bottom: 2px solid black;
+}
+
+.emphasis {
+  color: #dfc522;
+  font-style: italic;
+}
+
+.bold-italic {
+  font-style: italic;
+  font-weight: bold;
+}
+
+a.email-link {
+  color: #dfc522;
+  text-decoration: none;
+}
+
+a.email-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+a.email-link-white {
+  color: white;
+  text-decoration: none;
+}
+
+a.email-link-white:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+a.email-link-black {
+  color: #dfc522;
+  text-decoration: none;
+}
+
+a.email-link-black:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* header styling -----*/
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  background-color: black;
+  border-bottom: 2px solid #dfc522;
+  border-top: 2px solid #dfc522;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: white;
+  /* z-index: 99; */
+}
+
+.header-content {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.header-logo-wrap {
+  padding: 0px 50px;
+  order: 0;
+}
+
+
+.header-logo {
+  height: 150px;
+}
+
+.header-content h3 {
+  padding: 2px 0px;
+}
+
+.time-logo,
+.pin-logo {
+  margin: 0;
+}
+
+.header-schedule,
+.header-location {
+  visibility: hidden;
+}
+
+.header-schedule-info,
+.header-location-info {
+  padding-left: 20px;
+}
+
+/* landing-image styling -----*/
+.landing img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+/* content-1 styling -----*/
+.content-1 {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding: 100px 0px 10px 0px;
+}
+
+.about-content {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 80px;
+}
+
+.about-paragraph {
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  line-height: 32px;
+  width: 100%;
+  padding-top: 50px;
+  margin: auto;
+}
+
+.about-age {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.facebook,
+.facebook img,
+.email,
+.email img {
+  height: 70px;
+  width: 70px;
+}
+
+.facebook a:hover,
+.email a:hover {
+  opacity: 0.7;
+}
+
+/* content-2 styling -----*/
+.content-2 {
+  width: 100%;
+  margin: auto;
+}
+
+.levels-one-container,
+.levels-two-container {
+  background-color: #dfc522;
+  width: 100%;
+}
+
+.levels-one-content,
+.levels-two-content {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.levels-one-title,
+.levels-two-title {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding: 100px 0px 10px 0px;
+  margin-left: 20px;
+}
+
+.levels-one-intro,
+.levels-two-intro {
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  text-align: left;
+  padding-top: 50px;
+  margin-left: 30px;
+}
+
+.learn-list-1,
+.learn-list-2 {
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.levels-one-content ul > li:before,
+.levels-two-content ul > li:before {
+  content: "-";
+  position: absolute;
+  margin-left: -30px;
+}
+
+.levels-one-content li,
+.levels-two-content li {
+  line-height: 30px;
+  margin-left: 30px;
+}
+
+.reminder-1 {
+  width: 90%;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  line-height: 26px;
+  padding-bottom: 100px;
+  margin: auto;
+  text-align: left;
+}
+
+.levels-two-container {
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+.reminder-2 {
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  line-height: 26px;
+  font-weight: bold;
+  font-style: italic;
+  padding-bottom: 100px;
+  margin-left: 30px;
+  text-align: left;
+}
+
+/* schedule styling -----*/
+.schedule {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  background-color: white;
+}
+
+.schedule-location {
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.schedule-location-container {
+  width: 100%;
+  display: block;
+  margin:auto;
+}
+
+.schedule-location-title {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding: 100px 0px 0px 0px;
+}
+
+.location-greeting {
+  font-size: 26px;
+  font-style: italic;
+}
+
+.schedule-location-paragraph {
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.schedule-dates {
+  width: 90%;
+  height: auto;
+  padding: 50px 0px 50px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.beginner-schedule-container,
+.advanced-schedule-container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.beginner-schedule-title,
+.advanced-schedule-title {
+  font-size: 32px;
+}
+
+.beginner-pricing,
+.advanced-pricing {
+  font-size: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.beginner-times,
+.advanced-times {
+  font-size: 24px;
+}
+
+.beginner-schedule-table,
+.advanced-schedule-table {
+  font-size: 18px;
+  width: 70%;
+  margin: auto;
+}
+
+.beginner-session,
+.advanced-session {
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: inline-block;
+}
+
+.beginner-dates,
+.advanced-dates {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: inline-block;
+}
+
+.beginner-list-session,
+.beginner-list-dates,
+.advanced-list-session,
+.advanced-list-dates {
+  list-style: none;
+  padding: 0;
+  line-height: 25px;
+}
+
+.beginner-paypal-button form,
+.advanced-paypal-button form {
+  padding: 20px 20px 20px 50px;
+  margin: auto;
+}
+
+.free-sessions {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.free-sessions-title {
+  font-size: 36px;
+}
+
+.free-sessions p {
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+}
+
+
+/* content-3 styling -----*/
+.content-3 {
+  width: 100%;
+  height: 100%;
+  background-image: url('glovesandpads.jpg');
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.health-container {
+  display: block;
+}
+
+.health-title-container {
+  text-align: center;
+  margin: auto;
+}
+
+.health-title {
+  width: 80%;
+  color: white;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  padding: 20px;
+  margin: auto;
+  background-color: rgba(0,0,0,0.6);
+  background-size: contain;
+}
+
+.health-container {
+  padding: 100px 0px;
+}
+
+.health-info-container {
+  width: 80%;
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+  padding: 25px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.health-info-container p {
+  padding-bottom: 25px;
+}
+
+.health-container ul {
+  list-style: none;
+}
+
+.health-container ul > li:before {
+  content: "-";
+  position: absolute;
+  margin-left: -1.1em;
+}
+
+.health-container li {
+  line-height: 30px;
+  padding-left: 25px;
+}
+
+/* content-4 styling -----*/
+.content-4 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-1,
+.question-3 {
+  width: 100%;
+  height: auto;
+  color: white;
+  background-color: black;
+}
+
+.question-2 {
+  width: 100%;
+  height: auto;
+  background-color: #dfc522;
+}
+
+.question-1-container,
+.question-2-container,
+.question-3-container {
+  width: 80%;
+  margin:auto;
+  text-align: center;
+}
+
+.question-1-title,
+.question-2-title,
+.question-3-title {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  display: inline-block;
+  padding-top: 100px;
+}
+
+.question-1-paragraph {
+  padding-bottom: 100px;
+}
+
+.question-1-paragraph,
+.question-2-paragraph,
+.question-3-paragraph {
+  font-size: 24px;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  padding-top: 50px;
+  margin: auto;
+}
+
+.question-2-paragraph,
+.question-3-paragraph {
+  padding-bottom: 100px;
+}
+
+.q1-email-container {
+  padding: 15px 0px 100px;
+}
+
+.email-link {
+  font-size: 24px;
+  letter-spacing: 0.6px;
+}
+
+/* footer styling -----*/
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #dfc522;
+  font-size: 18px;
+  text-align: center;
+}
+
+.copyright {
+  padding-top: 15px;
+}
+
+/* apology page styling -----*/
+.apology-container {
+  height: 100%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  background-color: #121212;
+  color: #dfc522;
+}
+
+.apology-wrapper {
+  width: 90%;
+  margin: auto;
+  padding-top: 600px;
+  padding-bottom: 600px;
+}
+
+.apology-wrapper img {
+  height: 500px;
+}
+
+.apology,
+.return {
+  font-size: 42px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  padding-top: 50px;
+}
+
+a.return-link {
+  color: white;
+  text-decoration: underline;
+}
+
+a.return-link:hover {
+  color: #dfc522;
+  text-decoration: underline;
+}
+
+/* media queries -----*/
+
+/* desktop media-query ----*/
+@media (min-width: 1024px) {
+  .header {
+    height: 100px;
+    position: fixed;
+  }
+
+  .header-schedule,
+  .header-location {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    visibility: visible;
+  }
+
+  .header-logo {
+    height: 100px;
+  }
+
+  .about-title,
+  .levels-one-title,
+  .levels-two-title,
+  .schedule-location-title,
+  .health-title,
+  .question-1-title,
+  .question-2-title,
+  .question-3-title {
+    font-size: 36px;
+  }
+
+  .free-sessions-title {
+    font-size: 32px;
+  }
+
+  .about-content {
+    padding-bottom: 50px;
+  }
+
+  .about-paragraph {
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    line-height: 28px;
+    width: 60%;
+  }
+
+  .about-age {
+    font-size: 14px;
+  }
+
+  .links {
+    width: 25%;
+  }
+
+  .facebook,
+  .facebook img,
+  .email,
+  .email img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .content-2-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .levels-one-container,
+  .levels-two-container {
+    width: 50%;
+  }
+
+  .levels-one-content,
+  .levels-two-content {
+    width: 80%;
+    margin: auto;
+  }
+
+  .levels-one-intro,
+  .levels-two-intro,
+  .learn-list-1,
+  .learn-list-2,
+  .health-container ul,
+  .question-1-paragraph,
+  .question-2-paragraph,
+  .question-3-paragraph,
+  .free-sessions p {
+    font-size: 20px;
+    letter-spacing: 0.6px;
+  }
+
+  .reminder-1,
+  .reminder-2 {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+  }
+
+  .levels-two-container {
+    background-color: #dfc522;
+    color: black;
+  }
+
+  .location-greeting {
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .schedule-location-paragraph {
+    width: 50%;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+  }
+
+  .schedule-dates {
+    width: 60%;
+  }
+
+  .free-sessions {
+    width: 50%;
+  }
+
+  .beginner-schedule-title,
+  .advanced-schedule-title {
+    font-size: 26px;
+  }
+
+  .beginner-schedule-table,
+  .advanced-schedule-table {
+    font-size: 16px;
+    width: 50%;
+  }
+
+  .health-container {
+    padding: 200px 0px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .content-4 {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .question-1,
+  .question-2 {
+    height: auto;
+  }
+
+  .email-link {
+    font-size: 20px;
+  }
+
+  .apology-wrapper {
+    width: 40%;
+    margin: auto;
+    padding-top: 250px;
+  }
+
+  .apology,
+  .return {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.8px;
+    padding-top: 25px;
+  }
+
+}

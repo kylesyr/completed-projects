@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="penstyles.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<title>Find The Penguins</title>
+</head>
+
+<body>
+<div id="gamescreen">
+    	<div id="title"></div>
+        
+        <ul id="snowMounds">
+        	<li><img id="mound1" class="hover1" src="Web Files/mound_1.png" width="200" height="200"/></li>
+            <li><img id="mound2" class="hover2" src="Web Files/mound_2.png" width="200" height="200"/></li>
+            <li><img id="mound3" class="hover3" src="Web Files/mound_3.png" width="200" height="200"/></li>
+            <li><img id="mound4" class="hover4" src="Web Files/mound_4.png" width="200" height="200"/></li>
+            <li><img id="mound5" class="hover5" src="Web Files/mound_5.png" width="200" height="200"/></li>
+            <li><img id="mound6" class="hover6" src="Web Files/mound_6.png" width="200" height="200"/></li>
+            <li><img id="mound7" class="hover7" src="Web Files/mound_7.png" width="200" height="200"/></li>
+            <li><img id="mound8" class="hover8" src="Web Files/mound_8.png" width="200" height="200"/></li>
+            <li><img id="mound9" class="hover9" src="Web Files/mound_9.png" width="200" height="200"/></li>
+        </ul>
+        
+        <div id="scoreSystem">
+        	<p>PENGUINS FOUND: </p>
+        </div>
+        
+        <div id="reloadButton"></div>
+        
+    </div>
+</body>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	var images = ["Web Files/penguin_1.png", "Web Files/penguin_2.png", "Web Files/penguin_3.png", "Web Files/penguin_4.png", "Web Files/penguin_5.png", "Web Files/penguin_6.png", "Web Files/penguin_7.png", "Web Files/penguin_8.png", "Web Files/yeti.png"];
+	
+	var penguins = 8;
+	var yeti = 1;
+	var gameOver = false;
+	var penFound = 0;
+	var score = document.getElementById("scoreSystem").innerHTML;
+	
+	function getPenguin() {
+		var ranImg = Math.floor((Math.random() * images.length));
+		var nextPenguin = images[ranImg];
+		images.remove(ranImg);
+		return nextPenguin;
+	}
+
+	function genButton() {
+		var rel = document.createElement("BUTTON");
+		var text = document.createTextNode("Press to Reload Game");
+		
+		rel.appendChild(text);
+		document.getElementById("reloadButton").appendChild(rel);
+	}
+	
+	//reload game page after button appears and clicked
+	document.getElementById("reloadButton").onclick = function() {
+		location.reload();	
+	};
+		
+	$("#mound1, #mound2, #mound3, #mound4, #mound5, #mound6, #mound7, #mound8, #mound9").one('click', function() {
+		$(this).attr("src", getPenguin());
+		$(this).removeClass();
+		
+		if ($(this).attr("src").match("penguin")) {
+			penFound++;
+			document.getElementById("scoreSystem").innerHTML = score + penFound + "/8";
+		} else if ($(this).attr("src").match("yeti")) {
+			$("#mound1, #mound2, #mound3, #mound4, #mound5, #mound6, #mound7, #mound8, #mound9").unbind();
+			document.getElementById("scoreSystem").innerHTML = "Oh no! The Yeti scared away all of the penguins!";
+			genButton();
+		}
+		
+		if (penFound === penguins) {
+			$("#mound1, #mound2, #mound3, #mound4, #mound5, #mound6, #mound7, #mound8, #mound9").unbind();
+			document.getElementById("scoreSystem").innerHTML = "You saved all of the penguins! Congratulations!";
+			genButton();
+		}
+	});
+});
+
+Array.prototype.remove = function(from, to) {
+    var rest = this.slice((to || from) + 1 || this.length);
+    this.length = from < 0 ? this.length + from : from;
+    return this.push.apply(this, rest);
+};
+
+</script>
+
+</html>
